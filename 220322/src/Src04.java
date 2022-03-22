@@ -6,17 +6,22 @@ public class Src04 {
 		
 		Scanner sc = new Scanner(System.in);
 		int input;
+		int count = 0;
 		
 		while(true)
 		{
+			//	input
 			System.out.print("input number(1~10) >> ");
 			input = sc.nextInt();
 			
+			//	print "count"
 			if(input == 0)
 			{
-				System.out.println("EXIT : input 0");
+				System.out.println("EXIT : " + count + "time(s) input");
 				break;
 			}
+			
+			count++;
 		}
 	}
 }
