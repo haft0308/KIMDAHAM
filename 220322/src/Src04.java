@@ -13,15 +13,15 @@ public class Src04 {
 			//	input
 			System.out.print("input number(1~10) >> ");
 			input = sc.nextInt();
+
+			count++;
 			
 			//	print "count"
 			if(input == 0)
 			{
-				System.out.println("EXIT : " + count + "time(s) input");
+				System.out.println("EXIT : " + count + " time(s) input");
 				break;
 			}
-			
-			count++;
 		}
 	}
 }
