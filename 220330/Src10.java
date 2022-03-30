@@ -2,7 +2,6 @@
 public class Src10 {
 
 	//	12	//
-	//	XXXXXXXXX	//
 	
 	static void Print(char[][] _arr)
 	{
