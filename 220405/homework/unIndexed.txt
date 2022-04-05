@@ -1,0 +1,100 @@
+// 함수 정의를 하시오
+
+	static int sub(int i, int j)
+
+// 함수정의하시오
+
+	static int pow(int num)
+	{
+		return num * num; 
+	}
+
+// 함수 호출
+// age 값을 28로 할당될 수 있도록 함수를 호출한다
+
+	age = setAge(8);
+
+// 반복되는 부분을 찾아, 함수로 분리하시오
+
+	static void printArr(int[] _arr)
+	{
+		System.out.println("----------------");
+		
+		for(int i=0; i<_arr.length; i++)
+		{
+			System.out.println(_arr[i] + "\t");
+		}
+	}
+	
+	static int[] increaseArr(int[] _arr)
+	{
+		int[] arr = new int[_arr.length];
+		
+		for(int i=0; i<_arr.length; i++)
+		{
+			_arr[i] += 1;
+		}
+		
+		return arr;
+	}
+	
+// 함수를 정의하시오
+
+	static int mul(int _a, int _b)
+	{
+		return _a * _b;
+	}
+	
+// 함수를 정의하시오
+
+	static float add(float _a, float _b)
+	{
+		return _a + _b;
+	}
+	
+// 함수정의와 호출을 하시오
+
+	// 변경 함수 호출
+		changeArray(array);
+		
+	// 출력 함수 호출
+		printArray(array);
+		
+		printArray(arr);
+		
+	// 출력 함수 정의
+		static void printArray(int[] _arr)
+		{
+			for(int i=0; i<_arr.length; i++)
+			{
+				System.out.print(_arr[i] + ", ");
+			}
+		}
+
+// 출력함수 2가지를 정의하시오
+
+	// 1)
+	static void print(String[] _arr)
+	{
+		for(int i=0; i<_arr.length; i++)
+		{
+			System.out.println(_arr[i]);
+		}
+	}
+	
+	// 2)
+	static void printJJang(String[] _arr, String _str)
+	{
+		for(int i=0; i<_arr.length; i++)
+		{
+			System.out.println(_arr[i] + " " + _str);
+		}
+	}
+
+// 가장 긴 철자를 가지고 있는 과일이름 찾은 함수
+
+	String longestFruit = maxLengthFruit(fruit);
+		
+	System.out.println(storeName + "에서 가장 긴 이름을 가진 과일은 " + longestFruit);
+
+// 
