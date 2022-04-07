@@ -6,6 +6,9 @@ public class Src07 {
 	//	book
 	static void bookSeat(int[] _arr, int _seatNo)
 	{		
+		//	out of range
+		_seatNo--;
+		
 		if(_seatNo > _arr.length-1 || _seatNo < 0)
 		{
 			System.out.println("\"unable to book this seat. please retry.\"");
@@ -29,12 +32,15 @@ public class Src07 {
 	}
 	
 	//	print seats
-	static void printSeat(int[] _arr)
+	//	return false, if there's no more seat available
+	static boolean printSeat(int[] _arr)
 	{
+		boolean flag = false;
+		
 		System.out.println("seat number -");
 		for(int i=0; i<_arr.length; i++)
 		{
-			System.out.print(i + "\t");
+			System.out.print((i + 1) + "\t");
 		}
 		System.out.println();
 		
@@ -50,9 +56,12 @@ public class Src07 {
 			else if(_arr[i] == 0)
 			{
 				System.out.print("O\t");
+				flag = true;
 			}
 		}
 		System.out.println();
+		
+		return flag;
 	}
 	
 	//	create array full of 0, and return
@@ -76,15 +85,24 @@ public class Src07 {
 		
 		while(true)
 		{
-			printSeat(seat);
-			
-			System.out.print("choose your seat >> ");
-			tempSeatNo = sc.nextInt();
-			if(tempSeatNo == -1) {
-				System.out.println("\"book system has quit\"");
+			//	print
+			boolean flag = printSeat(seat);
+			if(flag == false)
+			{
+				System.out.println("\"there's no more seat. book system has quit\"");
 				break;
 			}
 			
+			//	input seat number
+			System.out.print("choose your seat >> ");
+			tempSeatNo = sc.nextInt();
+			if(tempSeatNo == -1)
+			{
+				System.out.println("\"input -1, book system has quit\"");
+				break;
+			}
+			
+			//	book
 			bookSeat(seat, tempSeatNo);
 		}
 		
