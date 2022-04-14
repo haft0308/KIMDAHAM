@@ -16,8 +16,8 @@ public class Src03 {
 
 		//	return this
 		Member m4 = new Member("ghi", "01011112222", "h");	// ghi, 01011112222, h	
-		m4 = m1.getMember();	// null, null, null
-		m4.print();	// null, null, null
+		m4 = m1.getMember();					// null, null, null
+		m4.print();						// null, null, null
 	}
 
 }
